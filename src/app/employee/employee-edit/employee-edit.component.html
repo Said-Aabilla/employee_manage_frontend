@@ -1,0 +1,30 @@
+<div class="container">
+
+    <form #editForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" ngModel="{{employeeToEdit?.name}}" name="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name">
+        </div>
+        <input type="hidden" ngModel="{{employeeToEdit?.id}}" name="id" class="form-control" id="id" placeholder="Email">
+        <input type="hidden" ngModel="{{employeeToEdit?.employeeCode}}" name="userCode" class="form-control" id="userCode" placeholder="Email">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" ngModel="{{employeeToEdit?.email}}" name="email" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Job title</label>
+            <input type="text" ngModel="{{employeeToEdit?.jobTitle}}" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" ngModel="{{employeeToEdit?.phone}}" name="phone" class="form-control" id="phone" name="phone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="phone">Image URL</label>
+            <input type="text" ngModel="{{employeeToEdit?.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL">
+        </div>
+        <div class="modal-footer">
+            <button (click)="onUpdateEmployee(editForm.value)" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+        </div>
+    </form>
+</div>
